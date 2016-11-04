@@ -1,119 +1,64 @@
- <!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html ng-app="SadeApp">
 <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-        <meta charset="utf-8">
-        <title>Bootply snippet - Bootstrap Navbar with Login dropdown form</title>
-        <meta name="generator" content="Bootply">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Bootstrap Navbar with Login dropdown form example snippet for Bootstrap.">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        
-        <!--[if lt IE 9]>
-          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Sade</title>
+  <meta name="generator" content="Bootply">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Sade">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+  <!-- Bootstrap and Angular and JQuery -->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  <!-- Start Jquery -->
 
 
+  <!-- Angular scripts -->
+  <script src="main.js"></script>
+</head>
 
+<body ng-controller="MainCtrl">
 
+  <!-- NAVBAR -->
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Sade</a>
+            <ul class="nav pull-right">
+              <li class="dropdown" id="menuLogin">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+                <div class="dropdown-menu" style="padding:17px;">
+                  <form class="form" id="formLogin">
+                    <input name="username" id="username" placeholder="Username" type="text">
+                    <input name="password" id="password" placeholder="Password" type="password"><br>
+                    <button type="button" id="btnLogin" class="btn">Login</button>
+                  </form>
+                </div>
+              </li>
+            </ul>
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
 
-
-
-
-
-
-        <!-- CSS code from Bootply.com editor -->
-        
-        <style type="text/css">
-            
-        </style>
-    </head>
     
-    <!-- HTML code from Bootply.com editor -->
-    
-    <body>
-        
-        <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="#">Project Name</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-             <ul class="dropdown-menu">
-               <li><a href="#">Action</a></li>
-               <li><a href="#">Another action</a></li>
-               <li><a href="#">Something else here</a></li>
-               <li class="divider"></li>
-               <li class="nav-header">Nav header</li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-             </ul>
-          </li>
-        </ul>
-        <ul class="nav pull-right">
-          <li class="dropdown" id="menuLogin">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
-            <div class="dropdown-menu" style="padding:17px;">
-              <form class="form" id="formLogin"> 
-                <input name="username" id="username" placeholder="Username" type="text"> 
-                <input name="password" id="password" placeholder="Password" type="password"><br>
-                <button type="button" id="btnLogin" class="btn">Login</button>
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div><!-- /.nav-collapse -->
-    </div><!-- /.container -->
-  </div><!-- /.navbar-inner -->
-</div><!-- /.navbar -->
-        
-        <script src="//www.google-analytics.com/analytics.js" async=""></script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
-        <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <p><button type="button" class="show-button" ng-click="firstScreen=!firstScreen">Show</button></p>
+    <div ng-show="firstScreen" ng-init="firstScreen=true">
+      <div ng-include src="'main.html'">
+      </div>
+    </div>
+    <!-- Content -->
 
 
 
-
-
-
-        
-        <!-- JavaScript jQuery code from Bootply.com editor  -->
-        
-        <script type="text/javascript">
-        
-        $(document).ready(function() {
-        
-            
-        
-        });
-        
-        </script>
-        
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-40413119-1', 'bootply.com');
-          ga('send', 'pageview');
-        </script>
-        
-        
-    
 </body>
+</html>
