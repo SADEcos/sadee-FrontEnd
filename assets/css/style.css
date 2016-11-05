@@ -1,0 +1,38 @@
+html {
+  position:relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom:60px;
+  padding-top:70px;
+}
+
+@media screen and (max-width: 980px) {
+    body { padding-top: 0px; }
+}
+
+.navbar-fixed-top {
+  top:0px;
+}
+.navbar-inner {
+  background:#2B292A;
+}
+.navbar .container {
+  padding-top:10px;
+  height:50px;
+}
+
+.navbar .brand,
+#navLogin {
+  text-shadow:none;
+  color:#fff;
+}
+
+#footer{
+  text-align:center;
+}
+
+#footer a{
+  text-decoration: none; 
+}

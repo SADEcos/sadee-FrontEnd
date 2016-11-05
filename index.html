@@ -7,7 +7,15 @@
   <meta name="generator" content="Bootply">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Sade">
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,16 +23,17 @@
   <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
-  <!-- Bootstrap and Angular and JQuery -->
+  <!-- Angular and JQuery -->
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
   <!-- Start Jquery -->
 
 
   <!-- Angular scripts -->
-  <script src="main.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body ng-controller="MainCtrl">
@@ -46,19 +55,30 @@
                 </div>
               </li>
             </ul>
-        </div><!-- /.container -->
-      </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-
-    
-    <p><button type="button" class="show-button" ng-click="firstScreen=!firstScreen">Show</button></p>
-    <div ng-show="firstScreen" ng-init="firstScreen=true">
-      <div ng-include src="'main.html'">
+        </div>
       </div>
     </div>
-    <!-- Content -->
+
+
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 text-center">
+        <p><button type="button" ng-click="firstScreen=!firstScreen">Show</button></p>
+        <div ng-show="firstScreen" ng-init="firstScreen=true">
+          <div ng-include src="'assets/html/main.html'"></div>
+        </div>
+      </div>
+      </div>
+    </div>
 
 
 
+    <!-- Footer-->
+    <div class="container" id="footer">
+        <p><a>CONPEC</a>
+            - Sade Sistema de Acompanhamento de Desenvolvedores Externos
+        </p>
+    </div>
 </body>
 </html>
