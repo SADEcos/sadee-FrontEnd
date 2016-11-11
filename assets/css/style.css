@@ -19,11 +19,27 @@ body {
     height:50px;
 }
 
-.navbar .brand,
-#navLogin {
+.dropdown {
+  right:0;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #FF6700;
+  color: #fff;
+}
+
+.navbar .brand, #navLogin{
     text-shadow:none;
     color:#fff;
 }
+
+.nav .open>a.login-custom, .nav .open>a.login-custom:focus,
+.nav .open>a.login-custom:hover, #navLogin:hover {
+  background-color: #FF6700;
+  color:#fff
+}
+
 
 #footer{
     text-align:center;
