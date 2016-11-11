@@ -5,6 +5,12 @@ mainApp.config(function($routeProvider) {
     $routeProvider
 
     // route for the home page
+    .when('/#', {
+        templateUrl : 'assets/html/main.html',
+        controller  : 'MainCtrl'
+    })
+
+    // route for the home page as well
     .when('/', {
         templateUrl : 'assets/html/main.html',
         controller  : 'MainCtrl'
