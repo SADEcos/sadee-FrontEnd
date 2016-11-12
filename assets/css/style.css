@@ -19,10 +19,26 @@ body {
     height:50px;
 }
 
-.navbar .brand,
-#navLogin {
+.dropdown {
+    right:0;
+    display: inline-block;
+}
+
+.form a,  #btnSignUp {
+    background-color: #FF6700;
+    border-color: #FF6700;
+    background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
+}
+
+.navbar .brand, #navLogin {
     text-shadow:none;
     color:#fff;
+}
+
+.nav .open>a.login-custom, .nav .open>a.login-custom:focus,
+.nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover, #btnSignUp {
+    background-color: #FF6700;
+    color:#fff
 }
 
 #footer{
