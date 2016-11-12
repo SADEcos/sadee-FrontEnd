@@ -24,10 +24,35 @@ body {
     display: inline-block;
 }
 
-.form a,  #btnSignUp {
+#btnSignUp {
     background-color: #FF6700;
     border-color: #FF6700;
     background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
+    margin: 3px 0;
+}
+
+#btnLogin {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #FF6700;
+    color: #fff;
 }
 
 .navbar .brand, #navLogin {
@@ -39,6 +64,35 @@ body {
 .nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover, #btnSignUp {
     background-color: #FF6700;
     color:#fff
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+#formLogin input {
+    margin: 3px 0px;
+    box-sizing: border-box;
+    padding: 3px 3px;
+    width: 100%;
+}
+
+#formSignUp input {
+    margin: 3px 0px;
+    box-sizing: border-box;
+    padding: 3px 3px;
+    width: 80%;
+}
+
+.form #btnSignUp {
+    margin: 5px 0;
+    width: 80%;
+}
+
+.dropdown-menu {
+    width: 100%;
+    min-width: 200px;
 }
 
 #footer{
