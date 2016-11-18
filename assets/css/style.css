@@ -151,15 +151,33 @@ body {
     color: #000;
 }
 
-.navbar .brand, #navLogin {
+.navbar .brand {
     text-shadow:none;
     color:#fff;
+    border-radius: 4px;
+    height: 35px;
+    width: 60px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+#navLogin {
+    text-shadow:none;
+    color:#fff;
+    border-radius: 4px;
+    background-color: #FF6700;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    padding: 5px 10px;
 }
 
 .nav .open>a.login-custom, .nav .open>a.login-custom:focus,
 .nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover {
     background-color: #EE6700;
-    color:#fff
+    color:#fff;
+    cursor:pointer;
+    border-color: #FF6700;
 }
 
 .vertical-align {
