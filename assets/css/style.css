@@ -24,14 +24,14 @@ body {
     display: inline-block;
 }
 
-#btnSignUp {
+#btnSignUp, .btn-orange {
     background-color: #FF6700;
     border-color: #FF6700;
     background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
     margin: 3px 0;
 }
 
-#btnLogin {
+#btnLogin, .btn-orange, .btn-orange:focus {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -55,6 +55,102 @@ body {
     color: #fff;
 }
 
+.btn-default {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #FF6700;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #EE6700;
+    color: #fff;
+}
+
+.btn-gray {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #EEEEEE;
+    color: #000;
+}
+
+.btn-gray:hover {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #DDDDDD;
+    color: #000;
+}
+
 .navbar .brand, #navLogin {
     text-shadow:none;
     color:#fff;
@@ -62,7 +158,7 @@ body {
 
 .nav .open>a.login-custom, .nav .open>a.login-custom:focus,
 .nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover, #btnSignUp {
-    background-color: #FF6700;
+    background-color: #EE6700;
     color:#fff
 }
 
@@ -70,6 +166,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 
 #formLogin input {
     margin: 3px 0px;
