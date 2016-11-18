@@ -8,6 +8,12 @@ body {
     padding-top:70px;
 }
 
+.caraDaConpec{
+background-image: url('/assets/img/ber.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
 .navbar-fixed-top {
     top:0px;
 }
