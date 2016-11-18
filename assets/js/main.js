@@ -42,6 +42,13 @@ mainApp.config(function($routeProvider) {
         controller  : 'MainCtrl'
     })
 
+    // route for the about page
+    .when('/sucesso', {
+        templateUrl : 'assets/html/sucesso.html',
+        controller  : 'MainCtrl'
+    })
+
+
     // 404 not found
     //.otherwise({  });
 });
@@ -83,7 +90,9 @@ mainApp.controller("MainCtrl", function($scope){
     {
         $scope.cadastro = 1;
     }
-
+    $scope.MeuSucesso = function() {
+            window.location.replace("http://localhost:1414/#sucesso");
+    }
 
 
 })
