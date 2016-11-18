@@ -46,9 +46,9 @@
                         <a class="dropdown-toggle login-custom" data-toggle="dropdown" id="navLogin">Login</a>
                         <div class="dropdown-menu dropdown-menu-right" style="padding:17px;">
                             <form class="form" id="formLogin">
-                                <input name="username" id="username" placeholder="Username" type="text">
-                                <input name="password" id="password" placeholder="Password" type="password"><br>
-                                <a type="button" href="#login" id="btnLogin" class="btn">Login</a>
+                                <input name="username" id="username" ng-model="user" placeholder="Username" type="text">
+                                <input name="password" id="password" ng-model="pass" placeholder="Password" type="password"><br>
+                                <a type="button" ng-click="ChangePage(user)" id="btnLogin" class="btn">Login</a>
                             </form>
                         </div>
                     </li>
