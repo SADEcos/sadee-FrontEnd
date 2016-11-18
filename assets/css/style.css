@@ -8,12 +8,6 @@ body {
     padding-top:70px;
 }
 
-.caraDaConpec{
-background-image: url('/assets/img/ber.jpg');
-background-repeat: no-repeat;
-background-size: 100%;
-}
-
 .navbar-fixed-top {
     top:0px;
 }
@@ -30,7 +24,7 @@ background-size: 100%;
     display: inline-block;
 }
 
-#btnSignUp, .btn-orange {
+.btn-orange {
     background-color: #FF6700;
     border-color: #FF6700;
     background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
@@ -163,7 +157,7 @@ background-size: 100%;
 }
 
 .nav .open>a.login-custom, .nav .open>a.login-custom:focus,
-.nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover, #btnSignUp {
+.nav .open>a.login-custom:hover, #navLogin:hover, #btnLogin:hover {
     background-color: #EE6700;
     color:#fff
 }
