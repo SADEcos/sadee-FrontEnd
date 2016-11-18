@@ -1,4 +1,4 @@
-var mainApp = angular.module("SadeApp", ['ngRoute']);
+var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule']);
 
 // configure our routes
 mainApp.config(function($routeProvider) {
@@ -67,12 +67,19 @@ mainApp.controller("MainCtrl", function($scope){
         }
 
 }
+$scope.slider = {
+    value: 10,
+    options: {
+        showSelectionBar: true
+    }
+};
 
     $scope.cadastro = 1;
 
     $scope.cadastro_para2 = function()
     {
         $scope.cadastro = 2;
+
 
         // With JQuery
         $("#java").slider();

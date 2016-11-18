@@ -115,15 +115,9 @@
         <!-- SKILLS -->
         <div ng-hide="cadastro==1" ng-show="cadastro==2">
 
-            <fieldset class="form-group row">
-                <input id="java" class="col-xs-2" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="0">
-                <span id="javaCurrentSliderVal">Conhecimento em JAVA Nível: <span id="javaSliderVal">3</span></span>
-            </fieldset>
+            <rzslider rz-slider-model="slider.value"
+          rz-slider-options="slider.options"></rzslider>
 
-            <fieldset class="form-group row">
-                <input id="php" class="col-xs-2" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="0">
-                <span id="phpCurrentSliderVal">Conhecimento em PHP Nível: <span id="phpSliderVal">3</span></span>
-            </fieldset>
             <div class="text-center">
                 <a id="btnBack" ng-click="cadastro_para1()" class="btn btn-gray" role="button">Retornar</a>
                 <button type="submit" name="submit" ng-click="MeuSucesso()" class="btn btn-orange">Próximo</button>
