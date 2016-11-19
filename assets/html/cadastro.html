@@ -115,11 +115,10 @@
         <!-- SKILLS -->
         <div ng-hide="cadastro==1" ng-show="cadastro==2">
 
-            <rzslider rz-slider-model="slider.value"
-          rz-slider-options="slider.options"></rzslider>
+            <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
 
             <div class="text-center">
-                <a id="btnBack" ng-click="cadastro_para1()" class="btn btn-gray" role="button">Retornar</a>
+                <a id="btnBack" ng-click=" cadastro_para1()" class="btn btn-gray" role="button">Retornar</a>
                 <button type="submit" name="submit" ng-click="MeuSucesso()" class="btn btn-orange">Próximo</button>
             </div>
         </div>

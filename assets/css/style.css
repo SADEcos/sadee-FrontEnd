@@ -185,6 +185,29 @@ body {
     align-items: center;
 }
 
+.rzslider .rz-pointer {
+    top: -14px;
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background-color: #FF6700;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+
+.rzslider .rz-bar.rz-selection {
+    z-index: 2;
+    background: #333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.rzslider .rz-pointer.rz-active:after {
+    background-color: #333;
+}
 
 #formLogin input {
     margin: 3px 0px;
