@@ -34,38 +34,39 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body ng-controller="MainCtrl">
 
-    <!-- NAVBAR -->
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="#/" id="sadeBrand"><img src="https://pbs.twimg.com/profile_images/1234800760/logotipo_400x400.png" alt="" width="30" /></a>
-                <ul class="nav pull-right">
-                    <li class="dropdown" id="menuLogin">
-                        <a class="dropdown-toggle login-custom btn-orange" data-toggle="dropdown" id="navLogin">Login</a>
-                        <div class="dropdown-menu dropdown-menu-right" style="padding:17px;">
-                            <form class="form" id="formLogin">
-                                <input name="username" id="username" ng-model="user" placeholder="Username" type="text">
-                                <input name="password" id="password" ng-model="pass" placeholder="Password" type="password"><br>
-                                <a type="button" ng-click="ChangePage(user)" id="btnLogin" class="btn">Login</a>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
+<body ng-controller="MainCtrl">
+    <div id="main-wrapper">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#/" id="sadeBrand"><img src="https://pbs.twimg.com/profile_images/1234800760/logotipo_400x400.png" alt="" width="30" /></a>
+                    <ul class="nav pull-right">
+                        <li class="dropdown" id="menuLogin">
+                            <a class="dropdown-toggle login-custom btn-orange" data-toggle="dropdown" id="navLogin">Login</a>
+                            <div class="dropdown-menu dropdown-menu-right" style="padding:17px;">
+                                <form class="form" id="formLogin">
+                                    <input name="username" id="username" ng-model="user" placeholder="Username" type="text">
+                                    <input name="password" id="password" ng-model="pass" placeholder="Password" type="password"><br>
+                                    <a type="button" ng-click="ChangePage(user)" id="btnLogin" class="btn">Login</a>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- CONTENT -->
-    <!-- Shows the content of the route -->
-    <div id="content" class= "container" ng-view></div>
+        <!-- CONTENT -->
+        <!-- Shows the content of the route -->
+        <div id="content" class= "container" ng-view></div>
 
-    <!-- Footer-->
-    <div class="container" id="footer">
-        <p><a>CONPEC</a>
-            - Sade Sistema de Acompanhamento de Desenvolvedores Externos
-        </p>
+        <!-- Footer-->
+        <div class="container" id="footer">
+            <a href="http://www.conpec.com.br/">CONPEC</a> - Sade Sistema de Acompanhamento de Desenvolvedores Externos
+        </div>
+
     </div>
 </body>
 </html>

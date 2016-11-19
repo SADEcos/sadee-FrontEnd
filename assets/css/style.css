@@ -4,19 +4,32 @@ html {
 }
 
 body {
-    margin-bottom:60px;
-    padding-top:70px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#content {
+    flex:1;
 }
 
 .navbar-fixed-top {
     top:0px;
 }
-.navbar-inner {
-    background:#2B292A;
-}
+
 .navbar .container {
     padding-top:10px;
     height:50px;
+}
+
+.navbar-inner {
+    background: #151515;
 }
 
 .dropdown {
@@ -30,123 +43,13 @@ body {
     background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
 }
 
-#btnLogin, .btn-orange, .btn-orange:focus {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+.btn-default, #btnLogin, .btn-orange, .btn-orange:focus, .btn-orange:hover {
     background-color: #FF6700;
     color: #fff;
 }
 
-.btn-default {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #FF6700;
-    color: #fff;
-}
-
-.btn-orange:hover {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #EE6700;
-    color: #fff;
-}
-
-.btn-gray {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+.btn-gray, .btn-gray:hover{
     background-color: #EEEEEE;
-    color: #000;
-}
-
-.btn-gray:hover {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #DDDDDD;
     color: #000;
 }
 
@@ -179,10 +82,7 @@ body {
     border-color: #FF6700;
 }
 
-.vertical-align {
-    display: flex;
-    align-items: center;
-}
+
 
 .rzslider .rz-pointer {
     top: -14px;
@@ -222,6 +122,23 @@ body {
     width: 80%;
 }
 
+.jumbotron {
+    background-color: transparent;
+}
+
+#footer{
+    width:100%;
+    background:#151515;
+    color: #8f9296;
+    padding: 5px;
+    text-align:center;
+}
+
+#footer a{
+    color: #8f9296;
+    text-decoration: none;
+}
+
 .form #btnSignUp {
     margin: 5px 0;
     width: 80%;
@@ -230,12 +147,4 @@ body {
 .dropdown-menu {
     width: 100%;
     min-width: 200px;
-}
-
-#footer{
-    text-align:center;
-}
-
-#footer a{
-    text-decoration: none;
 }
