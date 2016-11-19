@@ -37,8 +37,8 @@ mainApp.config(function($routeProvider) {
         controller  : 'MainCtrl'
     })
 
-    .when('/admin', {
-        templateUrl : 'assets/html/login-fake.html',
+    .when('/busca', {
+        templateUrl : 'assets/html/busca.html',
         controller  : 'MainCtrl'
     })
 
@@ -57,7 +57,7 @@ mainApp.controller("MainCtrl", function($scope){
 
     $scope.ChangePage = function(name){
         if(name.includes("admin")){
-            window.location.replace("http://localhost:1414/#admin");
+            window.location.replace("http://localhost:1414/#busca");
         }
         else if(name.includes("dev")){
             window.location.replace("http://localhost:1414/#dev");

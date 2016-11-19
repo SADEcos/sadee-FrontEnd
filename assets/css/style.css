@@ -28,7 +28,6 @@ body {
     background-color: #FF6700;
     border-color: #FF6700;
     background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
-    margin: 3px 0;
 }
 
 #btnLogin, .btn-orange, .btn-orange:focus {
