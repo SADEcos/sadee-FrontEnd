@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html ng-app="SadeApp">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Sade</title>
-    <meta name="generator" content="Bootply">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Sade">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Sade</title>
+        <meta name="generator" content="Bootply">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Sade">
 
-    <!-- Angular and JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- Angular and JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-    <!-- Angular route module -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <!-- Angular route module -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- Slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.7/rzslider.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.7/rzslider.min.css">
+        <!-- Slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.7/rzslider.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.8.7/rzslider.min.css">
 
-    <!-- Angular scripts -->
-    <script src="assets/js/main.js"></script>
+        <!-- Angular scripts -->
+        <script src="assets/js/main.js"></script>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
 
-<body ng-controller="MainCtrl">
-    <div id="main-wrapper">
-        <!-- NAVBAR -->
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="#/" id="sadeBrand"><img src="https://pbs.twimg.com/profile_images/1234800760/logotipo_400x400.png" alt="" width="30" /></a>
-                    <ul class="nav pull-right">
-                        <li class="dropdown" id="menuLogin">
-                            <a class="dropdown-toggle login-custom btn-orange" data-toggle="dropdown" id="navLogin">Login</a>
-                            <div class="dropdown-menu dropdown-menu-right" style="padding:17px;">
-                                <form class="form" id="formLogin">
-                                    <input name="username" id="username" ng-model="user" placeholder="Username" type="text">
-                                    <input name="password" id="password" ng-model="pass" placeholder="Password" type="password"><br>
-                                    <a type="button" ng-click="ChangePage(user)" id="btnLogin" class="btn">Login</a>
-                                </form>
-                            </div>
-                        </li>
-                    </ul>
+    <body ng-controller="MainCtrl">
+        <div id="main-wrapper">
+            <!-- NAVBAR -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="brand" href="#/" id="sadeBrand"><img src="https://pbs.twimg.com/profile_images/1234800760/logotipo_400x400.png" alt="" width="30" /></a>
+                        <ul class="nav pull-right">
+                            <li class="dropdown" id="menuLogin">
+                                <a class="dropdown-toggle login-custom btn-orange" data-toggle="dropdown" id="navLogin">Login</a>
+                                <div class="dropdown-menu dropdown-menu-right" style="padding:17px;">
+                                    <form class="form" id="formLogin">
+                                        <input name="username" id="username" ng-model="user" placeholder="Username" type="text">
+                                        <input name="password" id="password" ng-model="pass" placeholder="Password" type="password"><br>
+                                        <a type="button" ng-click="ChangePage(user)" id="btnLogin" class="btn">Login</a>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- CONTENT -->
+            <!-- Shows the content of the route -->
+            <div id="content" ng-view></div>
+
+            <!-- Footer-->
+            <div class="container" id="footer">
+                <a href="http://www.conpec.com.br/">CONPEC</a> - Sade Sistema de Acompanhamento de Desenvolvedores Externos
+            </div>
+
         </div>
-
-        <!-- CONTENT -->
-        <!-- Shows the content of the route -->
-        <div id="content" class= "container" ng-view></div>
-
-        <!-- Footer-->
-        <div class="container" id="footer">
-            <a href="http://www.conpec.com.br/">CONPEC</a> - Sade Sistema de Acompanhamento de Desenvolvedores Externos
-        </div>
-
-    </div>
-</body>
+    </body>
 </html>

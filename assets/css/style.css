@@ -1,12 +1,12 @@
-html {
-    position:relative;
-    min-height: 100%;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+a{
+    text-decoration: none;
 }
 
 #main-wrapper {
@@ -17,10 +17,33 @@ body {
 
 #content {
     flex:1;
+    width: 100%;
 }
 
-.navbar-fixed-top {
-    top:0px;
+#cadastro{
+    width:60%;
+    padding: 20px 0px 20px 0px;
+}
+
+#footer{
+    width:100%;
+    background:#151515;
+    color: #8f9296;
+    padding: 5px;
+    text-align:center;
+}
+
+#footer a{
+    color: #8f9296;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border: 0px ;
 }
 
 .navbar .container {
@@ -35,22 +58,6 @@ body {
 .dropdown {
     right:0;
     display: inline-block;
-}
-
-.btn-orange {
-    background-color: #FF6700;
-    border-color: #FF6700;
-    background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
-}
-
-.btn-default, #btnLogin, .btn-orange, .btn-orange:focus, .btn-orange:hover {
-    background-color: #FF6700;
-    color: #fff;
-}
-
-.btn-gray, .btn-gray:hover{
-    background-color: #EEEEEE;
-    color: #000;
 }
 
 .navbar .brand {
@@ -82,26 +89,28 @@ body {
     border-color: #FF6700;
 }
 
+.btn-orange {
+    background-color: #FF6700;
+    border-color: #FF6700;
+    background-image: linear-gradient(to bottom,#FF6700 0,#FF6700 100%);
+}
 
+.btn-default, #btnLogin, .btn-orange, .btn-orange:focus, .btn-orange:hover {
+    background-color: #FF6700;
+    color: #fff;
+}
+
+.btn-gray, .btn-gray:hover{
+    background-color: #EEEEEE;
+    color: #000;
+}
 
 .rzslider .rz-pointer {
-    top: -14px;
-    z-index: 3;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
     background-color: #FF6700;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
 }
 
 .rzslider .rz-bar.rz-selection {
-    z-index: 2;
     background: #333;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
 }
 
 .rzslider .rz-pointer.rz-active:after {
@@ -120,23 +129,6 @@ body {
     box-sizing: border-box;
     padding: 3px 3px;
     width: 80%;
-}
-
-.jumbotron {
-    background-color: transparent;
-}
-
-#footer{
-    width:100%;
-    background:#151515;
-    color: #8f9296;
-    padding: 5px;
-    text-align:center;
-}
-
-#footer a{
-    color: #8f9296;
-    text-decoration: none;
 }
 
 .form #btnSignUp {
