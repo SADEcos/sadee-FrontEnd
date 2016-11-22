@@ -1,106 +1,106 @@
 <div id="cadastro" class="container-fluid" >
-    <form>
+    <form class="form-horizontal">
         <!-- INFORMAÇÕES -->
         <div  ng-hide="cadastro==2" ng-show="cadastro==1">
             <fieldset class="form-group row">
-                <label for="nome" class="center-label col-xs-2 col-form-label">Nome:</label>
+                <label for="nome" class="col-xs-2 control-label">Nome:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="email" class="col-xs-2 col-form-label">Email:</label>
+                <label for="email" class="col-xs-2 control-label">Email:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="email" placeholder="Digite o email">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="senha" class="col-xs-2 col-form-label">Senha:</label>
+                <label for="senha" class="col-xs-2 control-label">Senha:</label>
                 <div class="col-xs-4">
                     <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
                 </div>
-                <label for="senha2" class="col-xs-2 col-form-label">Repetir senha:</label>
+                <label for="senha2" class="col-xs-2 control-label">Repetir senha:</label>
                 <div class="col-xs-4">
                     <input type="password" class="form-control" id="senha2" placeholder="Repetir senha">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="cpf" class="col-xs-2 col-form-label">CPF:</label>
+                <label for="cpf" class="col-xs-2 control-label">CPF:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="cpf" placeholder="xxx.xxx.xxx-xx">
                 </div>
-                <label for="rg" class="col-xs-2 col-form-label">RG:</label>
+                <label for="rg" class="col-xs-2 control-label">RG:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="rg" placeholder="xx.xxx.xxx-x">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="instituicao" class="col-xs-2 col-form-label">Instituição de ensino:</label>
+                <label for="instituicao" class="col-xs-2 control-label">Instituição de ensino:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="instituicao" placeholder="Digite a instituição">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="curso" class="col-xs-2 col-form-label">Curso:</label>
+                <label for="curso" class="col-xs-2 control-label">Curso:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="curso" placeholder="Digite o curso">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="disponibilidade" class="col-xs-2 col-form-label">Disponibilidade:</label>
+                <label for="disponibilidade" class="col-xs-2 control-label">Disponibilidade:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="disponibilidade" placeholder="Horas por semana">
                 </div>
-                <label for="graduacao" class="col-xs-2 col-form-label">Horas graduação:</label>
+                <label for="graduacao" class="col-xs-2 control-label">Horas graduação:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="graduacao" placeholder="Horas por semana">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="estagio" class="col-xs-2 col-form-label">Horas estágio:</label>
+                <label for="estagio" class="col-xs-2 control-label">Horas estágio:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="estagio" placeholder="Horas por semana">
                 </div>
-                <label for="curriculo" class="col-xs-2 col-form-label">Currículo:</label>
+                <label for="linkedin" class="col-xs-2 control-label">Linkedin:</label>
                 <div class="col-xs-4">
-                    <input type="file" id="curriculo" class="custom-file-input">
+                    <input type="text" id="linkedin" class="form-control" placeholder="Link do perfil">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="celular" class="col-xs-2 col-form-label">Celular:</label>
+                <label for="celular" class="col-xs-2 control-label">Celular:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx">
                 </div>
-                <label for="telefone" class="col-xs-2 col-form-label">Telefone:</label>
+                <label for="telefone" class="col-xs-2 control-label">Telefone:</label>
                 <div class="col-xs-4">
                     <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="text" class="col-xs-2 col-form-label">Endereço:</label>
+                <label for="text" class="col-xs-2 control-label">Endereço:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="observacoes" class="col-xs-2 col-form-label">Observações:</label>
+                <label for="observacoes" class="col-xs-2 control-label">Observações:</label>
                 <div class="col-xs-10">
                     <input type="text" class="form-control" id="observacoes" placeholder="Digite as observacoes">
                 </div>
             </fieldset>
 
             <fieldset class="form-group row">
-                <label for="conpec" class="col-xs-3 col-form-label">Como conheceu a conpec?</label>
+                <label for="conpec" class="col-xs-3 control-label">Como conheceu a conpec?</label>
                 <div class="col-xs-9">
                     <input type="text" class="form-control" id="conpec" placeholder="Digite como conheceu a conpec" placeholder="">
                 </div>
@@ -115,8 +115,12 @@
         <!-- SKILLS -->
         <div ng-hide="cadastro==1" ng-show="cadastro==2">
 
-            <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
-
+            <fieldset class="form-group row">
+                <label for="java" class="col-xs-2 control-label">Java:</label>
+                <div class="col-xs-10">
+                    <rzslider id="java" rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+                </div>
+            </fieldset>
             <div class="text-center">
                 <a id="btnBack" ng-click=" cadastro_para1()" class="btn btn-gray" role="button">Retornar</a>
                 <button type="submit" name="submit" ng-click="MeuSucesso()" class="btn btn-orange">Próximo</button>

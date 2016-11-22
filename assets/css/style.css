@@ -136,6 +136,10 @@ a{
     width: 80%;
 }
 
+.form-horizontal .control-label {
+    text-align: left;
+}
+
 .dropdown-menu {
     width: 100%;
     min-width: 200px;
