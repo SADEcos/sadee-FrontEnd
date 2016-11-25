@@ -68,12 +68,37 @@ mainApp.controller("MainCtrl", function($scope){
 
 }
 
-$scope.slider = {
-    value: 10,
+options = {
+    value: 0,
     options: {
-        showSelectionBar: true
+        floor: 0,
+        ceil: 10,
+        showSelectionBar: true,
+        getSelectionBarColor: function(value)
+        {
+            var cor = (150 - value*9).toString(16);
+            return "#"+cor+cor+cor;
+        }
+
     }
 };
+
+    $scope.sliderJava = $.extend(true, {}, options);
+    $scope.sliderPHP = $.extend(true, {}, options);
+    $scope.sliderMySQL = $.extend(true, {}, options);
+    $scope.sliderAjax = $.extend(true, {}, options);
+    $scope.sliderJavaScript = $.extend(true, {}, options);
+    $scope.sliderPython = $.extend(true, {}, options);
+    $scope.sliderCsharp = $.extend(true, {}, options);
+    $scope.sliderRuby = $.extend(true, {}, options);
+    $scope.sliderCpp = $.extend(true, {}, options);
+    $scope.sliderAndroid = $.extend(true, {}, options);
+    $scope.sliderIOS = $.extend(true, {}, options);
+    $scope.sliderJQuery = $.extend(true, {}, options);
+    $scope.sliderCSS = $.extend(true, {}, options);
+    $scope.sliderDotNet = $.extend(true, {}, options);
+    $scope.sliderAsp = $.extend(true, {}, options);
+    $scope.sliderCMS = $.extend(true, {}, options);
 
     $scope.cadastro = 1;
 
