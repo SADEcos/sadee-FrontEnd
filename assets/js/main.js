@@ -33,7 +33,7 @@ mainApp.config(function($routeProvider) {
     })
 
     .when('/dev', {
-        templateUrl : 'assets/html/login-fake.html',
+        templateUrl : 'assets/html/dev.html',
         controller  : 'MainCtrl'
     })
 
