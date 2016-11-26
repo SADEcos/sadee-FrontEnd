@@ -7,10 +7,10 @@
         <div class="col-xs-4">
             <div id="formParent">
                 <form align="center" class="form" id="formSignUp">
-                    <input name="username" id="usernameSignUp" placeholder="Username" type="text">
-                    <input name="email" id="emailSignUp" placeholder="Email" type="text">
-                    <input name="password" id="passwordSignUp" placeholder="Password" type="password"><br>
-                    <a href="#cadastro" id="btnSignUp" class="btn btn-orange" role="button">Dev, cadastre-se!</a>
+                    <input ng-model="username" name="username" id="usernameSignUp" placeholder="Username" type="text">
+                    <input ng-model="email" name="email" id="emailSignUp" placeholder="Email" type="text">
+                    <input ng-model="password" name="password" id="passwordSignUp" placeholder="Password" type="password"><br>
+                    <a href="#cadastro" id="btnSignUp" class="btn btn-orange" role="button" ng-click="PassaCadastro(username, email, password)">Dev, cadastre-se!</a>
                 </form>
             </div>
         </div>
