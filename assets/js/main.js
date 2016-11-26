@@ -1,4 +1,4 @@
-var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule']);
+var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule', 'ngTable']);
 
 // configure our routes
 mainApp.config(function($routeProvider) {
