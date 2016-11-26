@@ -20,11 +20,19 @@ mainApp.config(function($routeProvider) {
         templateUrl : 'assets/html/error.html',
         controller  : 'MainCtrl'
     })
+
     // route for the about page
     .when('/cadastro', {
         templateUrl : 'assets/html/cadastro.html',
         controller  : 'MainCtrl'
     })
+
+    // route for the about page
+    .when('/cadastro2', {
+        templateUrl : 'assets/html/cadastro2.html',
+        controller  : 'MainCtrl'
+    })
+
 
     // route for the about page
     .when('/login', {
@@ -104,7 +112,8 @@ options = {
 
     $scope.cadastro_para2 = function()
     {
-        $scope.cadastro = 2;
+
+        window.location.replace("http://localhost:1414/#cadastro2");
     }
 
     $scope.cadastro_para1 = function()
