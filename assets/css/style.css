@@ -144,3 +144,29 @@ a{
     width: 100%;
     min-width: 200px;
 }
+
+.panel-default>.panel-heading {
+    background-image: -webkit-linear-gradient(top,#fff 0,#fff 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#fff 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#fff));
+    background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
+    background-repeat: repeat-x;
+}
+
+.normal-label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0px;
+    margin-top: 7px;
+    font-weight: normal;
+}
+
+.dev-tab>a {
+    color: #333
+
+}
+
+.dev-tab>a:hover {
+    background-color: #FF6700
+}

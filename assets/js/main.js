@@ -1,4 +1,4 @@
-var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule']);
+var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule', 'ngTable']);
 
 // configure our routes
 mainApp.config(function($routeProvider) {
@@ -41,7 +41,7 @@ mainApp.config(function($routeProvider) {
     })
 
     .when('/dev', {
-        templateUrl : 'assets/html/login-fake.html',
+        templateUrl : 'assets/html/dev.html',
         controller  : 'MainCtrl'
     })
 
@@ -61,7 +61,13 @@ mainApp.config(function($routeProvider) {
     //.otherwise({  });
 });
 
-mainApp.controller("MainCtrl", function($scope){
+mainApp.controller("MainCtrl", function($scope, $rootScope){
+
+    $scope.PassaCadastro = function(username, email, password) {
+        $rootScope.username = username;
+        $rootScope.email = email;
+        $rootScope.password = password;
+    }
 
     $scope.ChangePage = function(name){
         if(name.includes("admin")){
