@@ -61,32 +61,71 @@ mainApp.config(function($routeProvider) {
     //.otherwise({  });
 });
 
-mainApp.controller("MainCtrl", function($scope, $rootScope){
-
-    $scope.nome = ''; //
-    $scope.email = ''; //
-    $scope.senha = ''; //
-    $scope.cpf = '';
-    $scope.rg = '';
-    $scope.instituicao = '';
-    $scope.curso = '';
-    $scope.disponibilidade = '';
-    $scope.graduacao = '';
-    $scope.estagio = '';
-    $scope.linkedin = '';
+mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
+  $rootScope.urlCadastro = "url do cadastro";
+    //$scope.nome = ''; //
+    //$scope.email = ''; //
+    //$scope.senha = ''; //
+    $scope.cpf = ''; //
+    $scope.rg = ''; //
+    $scope.instituicao = ''; //
+    $scope.curso = ''; //
+    $scope.disponibilidade = '';//
+    $scope.graduacao = '';//
+    $scope.estagio = '';//
+    $scope.linkedin = '';//
     $scope.celular = ''; //
-    $scope.telefone = '';
-    $scope.endereco = '';
+    $scope.telefone = '';//
+    $scope.endereco = '';//
     $scope.observacoes = '';
-    $scope.conpec = '';
+    $scope.conpec = '';//
 
     $scope.dataPost = {};
 
     $scope.PostNewUser = function(){
-      $scope.PostNewUser.NAME = $scope.nome;
-      $scope.PostNewUser.EMAIL = $scope.email;
-      $scope.PostNewUser.PASSWORD = $scope.senha;
-      $scope.PostNewUser.PHONE = $scope.celular;
+      $scope.PostNewUser.name = $rootScope.username;
+      $scope.PostNewUser.email = $rootScope.emailM;
+      $scope.PostNewUser.password = $rootScope.password;
+      $scope.PostNewUser.phone = $scope.celular;
+      $scope.PostNewUser.homephone = $scope.telefone;
+      $scope.PostNewUser.cpf = $scope.cpf;
+      $scope.PostNewUser.rg = $scope.rg;
+      $scope.PostNewUser.internship = $scope.estagio;
+      $scope.PostNewUser.undergraduate = $scope.graduacao;
+      $scope.PostNewUser.availability = $scope.disponibilidade;
+      $scope.PostNewUser.linkedin = $scope.linkedin;
+      $scope.PostNewUser.address = $scope.endereco;
+      $scope.PostNewUser.conpec = $scope.conpec;
+      $scope.PostNewUser.obs = $scope.observacoes;
+      $scope.PostNewUser.university = $scope.instituicao;
+      $scope.PostNewUser.course = $scope.curso;
+      $scope.PostNewUser.knowledgeList = [];
+      $scope.PostNewUser.knowledgeList.push({"name": "Java", "grade": $scope.sliderJava.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "PHP", "grade": $scope.sliderPHP.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "MySQL", "grade": $scope.sliderMySQL.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Ajax", "grade": $scope.sliderAjax.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Javascript", "grade": $scope.sliderJavaScript.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Python", "grade": $scope.sliderPython.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "C#", "grade": $scope.sliderCSharp.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Ruby", "grade": $scope.sliderRuby.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "C++", "grade": $scope.sliderCpp.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Android", "grade": $scope.sliderAndroid.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "IOS", "grade": $scope.sliderIOS.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "JQuery", "grade": $scope.sliderJQuery.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "CSS", "grade": $scope.sliderCSS.value });
+      $scope.PostNewUser.knowledgeList.push({"name": ".Net", "grade": $scope.sliderDotNet.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "Asp", "grade": $scope.sliderAsp.value });
+      $scope.PostNewUser.knowledgeList.push({"name": "CMS", "grade": $scope.sliderCMS.value });
+      $http.post($rootScope.urlCadastro, $scope.PostNewUser).
+    success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+        console.log(data);
+      }).
+      error(function(data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
     }
 
     $scope.PassaCadastro = function(username, email, password) {
