@@ -1,5 +1,5 @@
 <div id="cadastro" class="container-fluid" >
-    <form id="form-skills" class="form-horizontal">
+    <form id="form-skills" class="form-horizontal" ng-submit='cadastro_feito()'>
         <fieldset class="form-group row">
             <label for="java" class="col-xs-2 control-label">Java:</label>
             <div class="col-xs-10">
@@ -114,7 +114,7 @@
 
         <div class="text-center">
             <a id="btnBack" class="btn btn-gray" role="button">Retornar</a>
-            <button type="submit" name="submit" ng-click="MeuSucesso()" class="btn btn-orange">Próximo</button>
+            <button type="submit" name="submit" class="btn btn-orange">Próximo</button>
         </div>
     </form>
 </div>

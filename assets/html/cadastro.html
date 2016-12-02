@@ -1,114 +1,129 @@
 <div id="cadastro" class="container-fluid" >
-    <form id="form-informacoes" class="form-horizontal">
-        
+    <form id="form-informacoes" class="form-horizontal" ng-submit='cadastro_para2()'>
+
         <!-- INFORMAÇÕES -->
         <fieldset class="form-group row">
             <label for="nome" class="col-xs-2 control-label">Nome:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required="required">
+                <input type="text" class="form-control" id="nome" placeholder="Digite o nome" ng-model='nome' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="email" class="col-xs-2 control-label">Email:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="email" placeholder="Digite o email">
+                <input type="text" class="form-control" id="email" placeholder="Digite o email" ng-model='email' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="senha" class="col-xs-2 control-label">Senha:</label>
             <div class="col-xs-4">
-                <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
+                <input type="password" class="form-control" id="senha" placeholder="Digite a senha" ng-model='senha' required="required">
             </div>
             <label for="senha2" class="col-xs-2 control-label">Repetir senha:</label>
             <div class="col-xs-4">
-                <input type="password" class="form-control" id="senha2" placeholder="Repetir senha">
+                <input type="password" class="form-control" id="senha2" placeholder="Repetir senha" required="required">
             </div>
         </fieldset>
+
+        <!-- Confirma se as senhas sao iguais -->
+        <script language='javascript' type='text/javascript'>
+            var password = document.getElementById("senha"), confirm_password = document.getElementById("senha2");
+            function validatePassword(){
+                if(password.value != confirm_password.value) {
+                    confirm_password.setCustomValidity("Passwords don't match");
+                }
+                else {
+                    confirm_password.setCustomValidity("");
+                }
+            }
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        </script>
 
         <fieldset class="form-group row">
             <label for="cpf" class="col-xs-2 control-label">CPF:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="cpf" placeholder="xxx.xxx.xxx-xx">
+                <input type="text" class="form-control" id="cpf" placeholder="xxx.xxx.xxx-xx" ng-model='cpf' required="required">
             </div>
             <label for="rg" class="col-xs-2 control-label">RG:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="rg" placeholder="xx.xxx.xxx-x">
+                <input type="text" class="form-control" id="rg" placeholder="xx.xxx.xxx-x" ng-model='rg' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="instituicao" class="col-xs-2 control-label">Instituição de ensino:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="instituicao" placeholder="Digite a instituição">
+                <input type="text" class="form-control" id="instituicao" placeholder="Digite a instituição" ng-model='instituicao' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="curso" class="col-xs-2 control-label">Curso:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="curso" placeholder="Digite o curso">
+                <input type="text" class="form-control" id="curso" placeholder="Digite o curso" ng-model='curso' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="disponibilidade" class="col-xs-2 control-label">Disponibilidade:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="disponibilidade" placeholder="Horas por semana">
+                <input type="text" class="form-control" id="disponibilidade" placeholder="Horas por semana" ng-model='disponibilidade' required="required">
             </div>
             <label for="graduacao" class="col-xs-2 control-label">Horas graduação:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="graduacao" placeholder="Horas por semana">
+                <input type="text" class="form-control" id="graduacao" placeholder="Horas por semana" ng-model='graduacao' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="estagio" class="col-xs-2 control-label">Horas estágio:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="estagio" placeholder="Horas por semana">
+                <input type="text" class="form-control" id="estagio" placeholder="Horas por semana" ng-model='estagio' required="required">
             </div>
             <label for="linkedin" class="col-xs-2 control-label">Linkedin:</label>
             <div class="col-xs-4">
-                <input type="text" id="linkedin" class="form-control" placeholder="Link do perfil">
+                <input type="text" id="linkedin" class="form-control" placeholder="Link do perfil" ng-model='linkedin'>
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="celular" class="col-xs-2 control-label">Celular:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx">
+                <input type="text" class="form-control" id="celular" placeholder="(xx) xxxxx-xxxx" ng-model='celular' required="required">
             </div>
             <label for="telefone" class="col-xs-2 control-label">Telefone:</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx">
+                <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxx-xxxx" ng-model='telefone'>
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
-            <label for="text" class="col-xs-2 control-label">Endereço:</label>
+            <label for="endereco" class="col-xs-2 control-label">Endereço:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
+                <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço" ng-model='endereco' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="observacoes" class="col-xs-2 control-label">Observações:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="observacoes" placeholder="Digite as observacoes">
+                <input type="text" class="form-control" id="observacoes" placeholder="Digite as observacoes" ng-model='observacoes'>
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="conpec" class="col-xs-3 control-label">Como conheceu a conpec?</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" id="conpec" placeholder="Digite como conheceu a conpec" placeholder="">
+                <input type="text" class="form-control" id="conpec" placeholder="Digite como conheceu a conpec" placeholder="" ng-model='conpec'>
             </div>
         </fieldset>
 
         <div class="text-center">
             <a href="#/" id="btnBack" class="btn btn-gray" role="button">Retornar</a>
-            <button type="submit" ng-click="cadastro_para2()" name="submit" class="btn btn-orange">Próximo</button>
+            <button type="submit" name="submit" class="btn btn-orange">Próximo</button>
         </div>
     </form>
 </div>
