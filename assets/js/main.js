@@ -151,6 +151,8 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
         $rootScope.password = password;
     }
 
+    
+
     $scope.ChangePage = function(name){
         if(name.includes("admin")){
             window.location.replace("http://localhost:1414/#busca");

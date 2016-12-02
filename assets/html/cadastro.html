@@ -5,14 +5,14 @@
         <fieldset class="form-group row">
             <label for="nome" class="col-xs-2 control-label">Nome:</label>
             <div class="col-xs-10">
-                <input ng-model="$parent.username" type="text" class="form-control" id="nome" placeholder="Digite o nome" required="required">
+                <input ng-model="$parent.username" type="text" class="form-control" id="nome" placeholder="Digite o nome" ng-model='nome' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="email" class="col-xs-2 control-label">Email:</label>
             <div class="col-xs-10">
-                <input ng-model="$parent.emailM" type="text" class="form-control" id="email" placeholder="Digite o email" required="required">
+                <input ng-model="$parent.email" type="text" class="form-control" id="email" placeholder="Digite o email" ng-model='email' required="required">
             </div>
         </fieldset>
 
