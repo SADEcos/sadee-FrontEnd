@@ -20,11 +20,19 @@ mainApp.config(function($routeProvider) {
         templateUrl : 'assets/html/error.html',
         controller  : 'MainCtrl'
     })
+
     // route for the about page
     .when('/cadastro', {
         templateUrl : 'assets/html/cadastro.html',
         controller  : 'MainCtrl'
     })
+
+    // route for the about page
+    .when('/cadastro2', {
+        templateUrl : 'assets/html/cadastro2.html',
+        controller  : 'MainCtrl'
+    })
+
 
     // route for the about page
     .when('/login', {
@@ -72,22 +80,22 @@ mainApp.controller("MainCtrl", function($scope, $rootScope){
             window.location.replace("http://localhost:1414/#error");
         }
 
-}
-
-options = {
-    value: 0,
-    options: {
-        floor: 0,
-        ceil: 10,
-        showSelectionBar: true,
-        getSelectionBarColor: function(value)
-        {
-            var cor = (150 - value*9).toString(16);
-            return "#"+cor+cor+cor;
-        }
-
     }
-};
+
+    options = {
+        value: 0,
+        options: {
+            floor: 0,
+            ceil: 10,
+            showSelectionBar: true,
+            getSelectionBarColor: function(value)
+            {
+                var cor = (150 - value*9).toString(16);
+                return "#"+cor+cor+cor;
+            }
+
+        }
+    };
 
     $scope.sliderJava = $.extend(true, {}, options);
     $scope.sliderPHP = $.extend(true, {}, options);
@@ -110,16 +118,50 @@ options = {
 
     $scope.cadastro_para2 = function()
     {
-        $scope.cadastro = 2;
+        //aqui temos todos os dados da primeira parte do cadastro
+        // $scope.nome
+        // $scope.email
+        // $scope.senha
+        // $scope.cpf
+        // $scope.rg
+        // $scope.instituicao
+        // $scope.curso
+        // $scope.disponibilidade
+        // $scope.graduacao
+        // $scope.estagio
+        // $scope.linkedin
+        // $scope.celular
+        // $scope.telefone
+        // $scope.endereco
+        // $scope.observacoes
+        // $scope.conpec
+        window.location.replace("http://localhost:1414/#cadastro2");
+    }
+
+    $scope.cadastro_feito = function()
+    {
+        // $scope.sliderJava.value
+        // $scope.sliderPHP.value
+        // $scope.sliderMySQL.value
+        // $scope.sliderAjax.value
+        // $scope.sliderJavaScript.value
+        // $scope.sliderPython.value
+        // $scope.sliderCsharp.value
+        // $scope.sliderRuby.value
+        // $scope.sliderCpp.value
+        // $scope.sliderAndroid.value
+        // $scope.sliderIOS.value
+        // $scope.sliderJQuery.value
+        // $scope.sliderCSS.value
+        // $scope.sliderDotNet.value
+        // $scope.sliderAsp.value
+        // $scope.sliderCMS.value
+        console.log("olha o java aqui" + $scope.sliderJava.value);
+        window.location.replace("http://localhost:1414/#sucesso");
     }
 
     $scope.cadastro_para1 = function()
     {
         $scope.cadastro = 1;
     }
-    $scope.MeuSucesso = function() {
-            window.location.replace("http://localhost:1414/#sucesso");
-    }
-
-
 })
