@@ -80,6 +80,23 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
     $scope.observacoes = '';
     $scope.conpec = '';//
 
+    $scope.nome_dev = ''; //
+    $scope.email_dev = ''; //
+    $scope.senha_dev = ''; //
+    $scope.cpf_dev = '';
+    $scope.rg_dev = '';
+    $scope.instituicao_dev = '';
+    $scope.curso_dev = '';
+    $scope.disponibilidade_dev = '';
+    $scope.graduacao_dev = '';
+    $scope.estagio_dev = '';
+    $scope.linkedin_dev = '';
+    $scope.celular_dev = ''; //
+    $scope.telefone_dev = '';
+    $scope.endereco_dev = '';
+    $scope.observacoes_dev = '';
+    $scope.conpec_dev = '';
+
     $scope.dataPost = {};
 
     $scope.PostNewUser = function(){
