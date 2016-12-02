@@ -63,6 +63,23 @@ mainApp.config(function($routeProvider) {
 
 mainApp.controller("MainCtrl", function($scope, $rootScope){
 
+    $scope.nome = '';
+    $scope.email = '';
+    $scope.senha = '';
+    $scope.cpf = '';
+    $scope.rg = '';
+    $scope.instituicao = '';
+    $scope.curso = '';
+    $scope.disponibilidade = '';
+    $scope.graduacao = '';
+    $scope.estagio = '';
+    $scope.linkedin = '';
+    $scope.celular = '';
+    $scope.telefone = '';
+    $scope.endereco = '';
+    $scope.observacoes = '';
+    $scope.conpec = '';
+
     $scope.PassaCadastro = function(username, email, password) {
         $rootScope.username = username;
         $rootScope.email = email;
@@ -115,6 +132,42 @@ mainApp.controller("MainCtrl", function($scope, $rootScope){
     $scope.sliderCMS = $.extend(true, {}, options);
 
     $scope.cadastro = 1;
+
+    $scope.limpaCadatro = function()
+    {
+        $scope.nome = '';
+        $scope.email = '';
+        $scope.senha = '';
+        $scope.cpf = '';
+        $scope.rg = '';
+        $scope.instituicao = '';
+        $scope.curso = '';
+        $scope.disponibilidade = '';
+        $scope.graduacao = '';
+        $scope.estagio = '';
+        $scope.linkedin = '';
+        $scope.celular = '';
+        $scope.telefone = '';
+        $scope.endereco = '';
+        $scope.observacoes = '';
+        $scope.conpec = '';
+        $scope.sliderJava.value = 0;
+        $scope.sliderPHP.value = 0;
+        $scope.sliderMySQL.value = 0;
+        $scope.sliderAjax.value = 0;
+        $scope.sliderJavaScript.value = 0;
+        $scope.sliderPython.value = 0;
+        $scope.sliderCsharp.value = 0;
+        $scope.sliderRuby.value = 0;
+        $scope.sliderCpp.value = 0;
+        $scope.sliderAndroid.value = 0;
+        $scope.sliderIOS.value = 0;
+        $scope.sliderJQuery.value = 0;
+        $scope.sliderCSS.value = 0;
+        $scope.sliderDotNet.value = 0;
+        $scope.sliderAsp.value = 0;
+        $scope.sliderCMS.value = 0;
+    }
 
     $scope.cadastro_para2 = function()
     {
