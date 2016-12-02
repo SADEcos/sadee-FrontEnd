@@ -63,9 +63,9 @@ mainApp.config(function($routeProvider) {
 
 mainApp.controller("MainCtrl", function($scope, $rootScope){
 
-    $scope.nome = '';
-    $scope.email = '';
-    $scope.senha = '';
+    $scope.nome = ''; //
+    $scope.email = ''; //
+    $scope.senha = ''; //
     $scope.cpf = '';
     $scope.rg = '';
     $scope.instituicao = '';
@@ -74,15 +74,24 @@ mainApp.controller("MainCtrl", function($scope, $rootScope){
     $scope.graduacao = '';
     $scope.estagio = '';
     $scope.linkedin = '';
-    $scope.celular = '';
+    $scope.celular = ''; //
     $scope.telefone = '';
     $scope.endereco = '';
     $scope.observacoes = '';
     $scope.conpec = '';
 
+    $scope.dataPost = {};
+
+    $scope.PostNewUser = function(){
+      $scope.PostNewUser.NAME = $scope.nome;
+      $scope.PostNewUser.EMAIL = $scope.email;
+      $scope.PostNewUser.PASSWORD = $scope.senha;
+      $scope.PostNewUser.PHONE = $scope.celular;
+    }
+
     $scope.PassaCadastro = function(username, email, password) {
         $rootScope.username = username;
-        $rootScope.email = email;
+        $rootScope.emailM = email;
         $rootScope.password = password;
     }
 
