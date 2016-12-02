@@ -5,21 +5,21 @@
         <fieldset class="form-group row">
             <label for="nome" class="col-xs-2 control-label">Nome:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome" ng-model='nome' required="required">
+                <input ng-model="$parent.username" type="text" class="form-control" id="nome" placeholder="Digite o nome" ng-model='nome' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="email" class="col-xs-2 control-label">Email:</label>
             <div class="col-xs-10">
-                <input type="text" class="form-control" id="email" placeholder="Digite o email" ng-model='email' required="required">
+                <input ng-model="$parent.email" type="text" class="form-control" id="email" placeholder="Digite o email" ng-model='email' required="required">
             </div>
         </fieldset>
 
         <fieldset class="form-group row">
             <label for="senha" class="col-xs-2 control-label">Senha:</label>
             <div class="col-xs-4">
-                <input type="password" class="form-control" id="senha" placeholder="Digite a senha" ng-model='senha' required="required">
+                <input ng-model="$parent.password" type="password" class="form-control" id="senha" placeholder="Digite a senha" ng-model='senha' required="required">
             </div>
             <label for="senha2" class="col-xs-2 control-label">Repetir senha:</label>
             <div class="col-xs-4">
