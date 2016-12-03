@@ -1,95 +1,86 @@
-<div ng-controller="SearchController as sc">
-	<div id="buscaFormNome" class="container-fluid" style="width:75%; margin-top:16px;
-		margin-bottom:10px;">
-		<form class="form-horizontal">
-			<fieldset class="form-group row">
-				<label for="buscaNome" class="col-xs-2 control-label">Nome:</label>
-				<div class="col-xs-7">
-					<input ng-model="user.name" type="nome" class="form-control" id="buscaNome"
-						placeholder="Digite o nome">
-				</div>
+<div ng-controller="SearchController" id="buscaFormNome" class="container-fluid" style="width:75%; margin-top:16px; margin-bottom:10px;">
+    <form class="form-horizontal">
+        <fieldset class="form-group row">
+            <label for="buscaNome" class="col-xs-2 control-label">Nome:</label>
+            <div class="col-xs-7">
+                <input type="nome" class="form-control" id="buscaNome"
+                    placeholder="Digite o nome">
+            </div>
 
-				<label for="buscaDisponivel" class="col-xs-2 control-label">
-					Disponível</label>
-				<div class="col-xs-1">
-					<input ng-model="user.avaliable" type="checkbox" id="buscaDisponivel">
-				</div>
-			</fieldset>
-		</form>
-	</div>
+            <label for="buscaDisponivel" class="col-xs-2 control-label">
+                Disponível</label>
+            <div class="col-xs-1">
+                <input type="checkbox" id="buscaDisponivel">
+            </div>
+        </fieldset>
+    </form>
+</div>
 
-	<div id="buscaLinguagens" class="container-fluid" style="width:75%; margin-bottom:16px;">
-		<div class="row">
-			<div class="col-xs-3">Java
-				<input ng-model="user.Java" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">PHP
-				<input ng-model="user.PHP" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">MySQL
-				<input ng-model="user.MySQL" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">Ajax
-				<input ng-model="user.Ajax" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
+<div id="buscaLinguagens" class="container-fluid" style="width:75%; margin-bottom:16px;">
+	<div class="row">
+		<div class="col-xs-3">Java
+			<input type="checkbox" class="col-xs-6" style="float: right;">
 		</div>
-		<div class="row">
-			<div class="col-xs-3">Javascript
-				<input ng-model="user.Javascript" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">Python
-				<input ng-model="user.Python" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">C#
-				<input ng-model="user.Csharp" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">Ruby
-				<input ng-model="user.Ruby" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
+		<div class="col-xs-3">PHP
+			<input type="checkbox" class="col-xs-6" style="float: right;">
 		</div>
-		<div class="row">
-			<div class="col-xs-3">C++
-				<input ng-model="user.Cpp" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">Android
-				<input ng-model="user.Android" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">iOS
-				<input ng-model="user.iOS" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">JQuery
-				<input ng-model="user.JQuery" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
+		<div class="col-xs-3">MySQL
+			<input type="checkbox" class="col-xs-6" style="float: right;">
 		</div>
-		<div class="row">
-			<div class="col-xs-3">CSS
-				<input ng-model="user.CSS" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">.net
-				<input ng-model="user.dotnet" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">Asp
-				<input ng-model="user.Asp" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
-			<div class="col-xs-3">CMS
-				<input ng-model="user.CMS" type="checkbox" class="col-xs-6" style="float: right;">
-			</div>
+		<div class="col-xs-3">Ajax
+			<input type="checkbox" class="col-xs-6" style="float: right;">
 		</div>
 	</div>
-
-	<div id="buscaPesquisa" class="container-fluid" style="width:75%; margin-bottom:16px;">
-		<div class="text-center">
-			<button type="submit" ng-click="teste()" name="submit"
-				class="btn btn-orange">Pesquisar</button>
+	<div class="row">
+		<div class="col-xs-3">Javascript
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">Python
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">C#
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">Ruby
+			<input type="checkbox" class="col-xs-6" style="float: right;">
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-xs-3">C++
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">Android
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">iOS
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">JQuery
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">CSS
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">.net
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">Asp
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+		<div class="col-xs-3">CMS
+			<input type="checkbox" class="col-xs-6" style="float: right;">
+		</div>
+	</div>
+</div>
 
-	<table ng-table="sc.tableParams" class="table" show-filter="true">
-		<tr ng-repeat="usr in $mockUsers">
-			<!--<td title="'Name'" filter="{ Nome: 'Nome'}" sortable="'Nome'">{{usr.Nome}}</td>-->
-			<td title="'Nome'" filter="{ Nome: 'text'}" sortable="'Nome'">{{usr.Nome}}</td>
-		</tr>
-	</table>
+<div id="buscaPesquisa" class="container-fluid" style="width:75%; margin-bottom:16px;">
+	<div class="text-center">
+		<button type="submit" ng-click="cadastro_para2()" name="submit"
+			class="btn btn-orange">Pesquisar</button>
+	</div>
+</div>
 
 <!--<div id="buscaTabela" class="container-fluid" style="width:100%; margin-bottom:16px;">
 	<div class="row">
