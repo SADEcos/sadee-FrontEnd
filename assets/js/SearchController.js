@@ -109,11 +109,11 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
         // this callback will be called asynchronously
         // when the response is available
         console.log(data);
-		$rootScope.nome = user['Nome'];
-		$rootScope.email = user['Email'];
-		$rootScope.instituicao = user['Instituicao'];
-		$rootScope.curso = user['Curso'];
-		$rootScope.disponibilidade = user['Disponibilidade'];
+		$rootScope.nome_dev = user['Nome'];
+		$rootScope.email_dev = user['Email'];
+		$rootScope.instituicao_dev = user['Instituicao'];
+		$rootScope.curso_dev = user['Curso'];
+		$rootScope.disponibilidade_dev = user['Disponibilidade'];
       }).
       error(function(data, status, headers, config) {
         // called asynchronously if an error occurs
