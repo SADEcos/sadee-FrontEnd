@@ -84,22 +84,21 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
     $rootScope.observacoes = '';
     $rootScope.conpec = '';
 
-    $scope.nome_dev = ''; //
-    $scope.email_dev = ''; //
-    $scope.senha_dev = ''; //
-    $scope.cpf_dev = '';
-    $scope.rg_dev = '';
-    $scope.instituicao_dev = '';
-    $scope.curso_dev = '';
-    $scope.disponibilidade_dev = '';
-    $scope.graduacao_dev = '';
-    $scope.estagio_dev = '';
-    $scope.linkedin_dev = '';
-    $scope.celular_dev = ''; //
-    $scope.telefone_dev = '';
-    $scope.endereco_dev = '';
-    $scope.observacoes_dev = '';
-    $scope.conpec_dev = '';
+    $rootScope.nome_dev = 'João Conpec'; //
+    $rootScope.email_dev = 'joao@conpec.com.br'; //
+    $rootScope.cpf_dev = '445.548.619-46';
+    $rootScope.rg_dev = '36.564.098-4';
+    $rootScope.instituicao_dev = 'Unicamp';
+    $rootScope.curso_dev = 'Computação';
+    $rootScope.disponibilidade_dev = '10';
+    $rootScope.graduacao_dev = '6';
+    $rootScope.estagio_dev = '20';
+    $rootScope.linkedin_dev = 'link.din';
+    $rootScope.celular_dev = '6265-4649'; //
+    $rootScope.telefone_dev = '3256-6598';
+    $rootScope.endereco_dev = 'Rua dos bobos numero 0';
+    $rootScope.observacoes_dev = '';
+    $rootScope.conpec_dev = '';
 
     $scope.dataPost = {};
 
@@ -157,15 +156,11 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
         $rootScope.password = password;
     }
 
-
-
     $scope.ChangePage = function(name, pass){
       var loginObj = {};
       loginObj.username = name;
       loginObj.password = pass;
-      $http.post($rootScope.url, loginObj)
-      .success(data){
-      }
+
 
         if(name.includes("admin")){
             window.location.replace("http://localhost:1414/#busca");
@@ -177,7 +172,7 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
             window.location.replace("http://localhost:1414/#error");
         }
 
-    }
+}
 
     options = {
         value: 0,

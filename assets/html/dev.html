@@ -3,41 +3,41 @@
     <fieldset class="form-group row">
         <label for="nome" class="col-xs-2 control-label">Nome:</label>
         <div class="col-xs-4">
-            <label ng-model='nome_dev' for="nome" class="normal-label" id="nome">
+            {{$parent.nome_dev}}
         </div>
         <label for="email" class="col-xs-2 control-label">Email:</label>
         <div class="col-xs-4">
-            <label ng-model='email_dev' for="email" class="normal-label" id="email">
+            {{$parent.email_dev}}
         </div>
     </fieldset>
     <fieldset class="form-group row">
         <label for="celular" class="col-xs-2 control-label">Celular:</label>
         <div class="col-xs-4">
-            <label ng-model='celular_dev' for="celular" class="normal-label" id="celular">
+            {{$parent.celular_dev}}
         </div>
         <label for="linkedin" class="col-xs-2 control-label">Linkedin:</label>
         <div class="col-xs-4">
-            <label ng-model='linkedin_dev' for="linkedin" class="normal-label" id="linkedin">
+            {{$parent.linkedin_dev}}
         </div>
     </fieldset>
     <fieldset class="form-group row">
         <label for="instituicao" class="col-xs-2 control-label">Instituição:</label>
         <div class="col-xs-4">
-            <label ng-model='instituicao_dev' for="instituicao" class="normal-label" id="instituicao">
+            {{$parent.instituicao_dev}}
         </div>
         <label for="graduacao" class="col-xs-2 control-label">Curso:</label>
         <div class="col-xs-4">
-            <label ng-model='graduacao_dev' for="curso" class="normal-label" id="graduacao">
+            {{$parent.graduacao_dev}}
         </div>
     </fieldset>
     <fieldset class="form-group row">
         <label for="disponibilidade" class="col-xs-2 control-label">Disponibilidade:</label>
         <div class="col-xs-4">
-            <label ng-model='disponibilidade_dev' for="instituicao" class="normal-label" id="disponibilidade">
+            {{$parent.disponibilidade_dev}}
         </div>
         <label for="estagio" class="col-xs-2 control-label">Horas de estágio:</label>
         <div class="col-xs-4">
-            <label ng-model='estagio_dev' for="curso" class="normal-label" id="estagio">
+            {{$parent.estagio_dev}}
         </div>
     </fieldset>
 
@@ -45,23 +45,23 @@
 
     <!--Outras informações-->
     <fieldset class="form-group row">
-        <label for="cpf" class="col-xs-2 control-label">CPF:</label>
-        <div class="col-xs-2">
-            <label ng-model='cpf_dev' for="cpf" class="normal-label" id="cpf">
+        <label for="cpf" class="col-xs-1 control-label">CPF:</label>
+        <div class="col-xs-3">
+            {{$parent.cpf_dev}}
         </div>
-        <label for="rg" class="col-xs-2 control-label">RG:</label>
-        <div class="col-xs-2">
-            <label ng-model='rg_dev' for="rg" class="normal-label" id="rg">
+        <label for="rg" class="col-xs-1 control-label">RG:</label>
+        <div class="col-xs-3">
+            {{$parent.rg_dev}}
         </div>
         <label for="telefone" class="col-xs-2 control-label">Telefone:</label>
         <div class="col-xs-2">
-            <label ng-model='telefone_dev' for="telefone" class="normal-label" id="telefone">
+            {{$parent.telefone_dev}}
         </div>
     </fieldset>
     <fieldset class="form-group row">
         <label for="endereco" class="col-xs-2 control-label">Endereço:</label>
         <div class="col-xs-10">
-            <label ng-model='endereco_dev' for="endereco" class="normal-label" id="endereco">
+            {{$parent.endereco_dev}}
         </div>
     </fieldset>
 </div>

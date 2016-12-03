@@ -1,4 +1,4 @@
-mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($scope, NgTableParams){
+mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($scope, NgTableParams, $rootScope){
     $scope.show = {
 		"Nome": true,
 		"Email": true,
@@ -54,7 +54,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 		"Disponibilidade": 40,
 		"Java": 2,
 		"PHP": 3,
-		"MySQL": 5, 
+		"MySQL": 5,
 		"Ajax": 2,
 		"Javascript": 4,
 		"Python": 0,
@@ -79,7 +79,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 		"Disponibilidade": 23,
 		"Java": 9,
 		"PHP": 0,
-		"MySQL": 6, 
+		"MySQL": 6,
         "Ajax": 1,
         "Javascript": 3,
         "Python": 2,
@@ -104,20 +104,19 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
     }
 
 	$scope.UserDetails = function(user){
-	  $http.get($rootScope.urlGetUser, $scope.PostNewUser).
-	  success(function(data, status, headers, config) {
-        // this callback will be called asynchronously
+	//   $http.get($rootScope.urlGetUser, $scope.PostNewUser).
+	//   success(function(data, status, headers, config) {
+    //     // this callback will be called asynchronously
         // when the response is available
-        console.log(data);
 		$rootScope.nome_dev = user['Nome'];
 		$rootScope.email_dev = user['Email'];
 		$rootScope.instituicao_dev = user['Instituicao'];
 		$rootScope.curso_dev = user['Curso'];
 		$rootScope.disponibilidade_dev = user['Disponibilidade'];
-      }).
-      error(function(data, status, headers, config) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-      });	
+    //   }).
+    //   error(function(data, status, headers, config) {
+    //     // called asynchronously if an error occurs
+    //     // or server returns response with an error status.
+    //   });
 	}
 }]);
