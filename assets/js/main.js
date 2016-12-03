@@ -66,6 +66,7 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
     //$scope.nome = ''; //
     //$scope.email = ''; //
     //$scope.senha = ''; //
+    $rootScope.token = undefined;
     $rootScope.nome = '';
     $rootScope.email = '';
     $rootScope.senha = '';
@@ -119,6 +120,7 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
       $scope.dataPost.obs = $scope.observacoes;
       $scope.dataPost.university = $scope.instituicao;
       $scope.dataPost.course = $scope.curso;
+      $scope.dataPost.token = $rootScope.token;
       $scope.dataPost.knowledgeList = [];
       $scope.dataPost.knowledgeList.push({"name": "Java", "grade": $scope.sliderJava.value });
       $scope.dataPost.knowledgeList.push({"name": "PHP", "grade": $scope.sliderPHP.value });
@@ -155,9 +157,16 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
         $rootScope.password = password;
     }
 
-    
 
-    $scope.ChangePage = function(name){
+
+    $scope.ChangePage = function(name, pass){
+      var loginObj = {};
+      loginObj.username = name;
+      loginObj.password = pass;
+      $http.post($rootScope.url, loginObj)
+      .success(data){
+      }
+
         if(name.includes("admin")){
             window.location.replace("http://localhost:1414/#busca");
         }
