@@ -99,7 +99,7 @@
             <td ng-repeat="column in columns" class="text-center" title="column.field" sortable="column.field" ng-show="show[column.field]">
                 <span ng-show="column.field == 'Disponivel' && user['Disponivel']">Sim</span>
 				<span ng-show="column.field == 'Disponivel' && !user['Disponivel']">Não</span> 
-				<span ng-show="column.field == 'Nome'"><a href="#/dev/{{user['Nome']}}">{{user[column.field]}}</a></span>
+				<span ng-show="column.field == 'Nome'" ><a href="#/dev/{{user['Id']}}" ng-click="UserDetails(user)">{{user[column.field]}}</a></span>
 				<span ng-show="column.field !== 'Disponivel' && column.field !== 'Nome'">{{user[column.field]}}</span>
             </td>
         </tr>

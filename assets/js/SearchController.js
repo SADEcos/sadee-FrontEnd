@@ -49,6 +49,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 		"Email": "perik@perillo.com",
 		"Disponivel": false,
 		"Instituicao": "Unicamp",
+		"Id": 2,
 		"Curso": "Medicina",
 		"Disponibilidade": 40,
 		"Java": 2,
@@ -73,6 +74,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 		"Email": "erik@erillo.com",
 		"Disponivel": true,
 		"Instituicao": "Punicam",
+		"Id": 1,
 		"Curso": "MadeInChina",
 		"Disponibilidade": 23,
 		"Java": 9,
@@ -100,4 +102,22 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
     $scope.teste = function(){
 		console.log(JSON.stringify($scope.user));
     }
+
+	$scope.UserDetails = function(user){
+	  $http.get($rootScope.urlGetUser, $scope.PostNewUser).
+	  success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+        console.log(data);
+		$rootScope.nome = user['Nome'];
+		$rootScope.email = user['Email'];
+		$rootScope.instituicao = user['Instituicao'];
+		$rootScope.curso = user['Curso'];
+		$rootScope.disponibilidade = user['Disponibilidade'];
+      }).
+      error(function(data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });	
+	}
 }]);
