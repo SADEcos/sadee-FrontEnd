@@ -1,8 +1,8 @@
 mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($scope, NgTableParams){
-    $scope.lang = {
+    $scope.show = {
 		"Nome": true,
 		"Email": true,
-		"Ocupado": false,
+		"Disponivel": true,
         "Java": false,
         "PHP": false,
         "MySQL": false,
@@ -24,7 +24,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 	$scope.columns = [
                 { title: 'Nome', field: 'Nome', visible: true, filter: { 'Nome': 'text' } },
                 { title: 'Email', field: 'Email', visible: true, filter: { 'Email': 'text' } },
-                { title: 'Ocupado', field: 'Ocupado', visible: true, filter: { 'Ocupado': 'text' } },
+                { title: 'Disponivel', field: 'Disponivel', visible: true, filter: { 'Disponivel': 'text' } },
                 { title: 'Java', field: 'Java', visible: true, filter: { 'Java': 'text' } },
                 { title: 'PHP', field: 'PHP', visible: true, filter: { 'PHP': 'text' } },
                 { title: 'MySQL', field: 'MySQL', visible: true, filter: { 'MySQL': 'text' } },
@@ -47,7 +47,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 	{
 		"Nome": "Erik Perillo",
 		"Email": "perik@perillo.com",
-		"Ocupado": false,
+		"Disponivel": false,
 		"Instituicao": "Unicamp",
 		"Curso": "Medicina",
 		"Disponibilidade": 40,
@@ -71,7 +71,7 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 	}, {
 		"Nome": "Perik Erillo",
 		"Email": "erik@erillo.com",
-		"Ocupado": true,
+		"Disponivel": true,
 		"Instituicao": "Punicam",
 		"Curso": "MadeInChina",
 		"Disponibilidade": 23,

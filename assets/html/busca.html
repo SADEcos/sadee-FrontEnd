@@ -9,11 +9,11 @@
 						placeholder="Digite o nome">
 				</div>
 
-				<label for="buscaOcupado" class="col-xs-2 control-label">
-					Ocupado</label>
+				<!--<label for="buscaDisponivel" class="col-xs-2 control-label">
+					Disponivel</label>
 				<div class="col-xs-1">
-					<input ng-model="lang.Ocupado" type="checkbox" id="buscaOcupado">
-				</div>
+					<input ng-model="show.Disponivel" type="checkbox" id="buscaDisponivel">
+				</div>-->
 			</fieldset>
 		</form>
 	</div>
@@ -21,58 +21,58 @@
 	<div id="buscaLinguagens" class="container-fluid" style="width:75%; margin-bottom:16px;">
 		<div class="row">
 			<div class="col-xs-3">Java
-				<input ng-model="lang.Java" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Java" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">PHP
-				<input ng-model="lang.PHP" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.PHP" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">MySQL
-				<input ng-model="lang.MySQL" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.MySQL" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">Ajax
-				<input ng-model="lang.Ajax" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Ajax" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-3">Javascript
-				<input ng-model="lang.Javascript" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Javascript" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">Python
-				<input ng-model="lang.Python" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Python" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">C#
-				<input ng-model="lang.Csharp" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Csharp" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">Ruby
-				<input ng-model="lang.Ruby" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Ruby" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-3">C++
-				<input ng-model="lang.Cpp" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Cpp" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">Android
-				<input ng-model="lang.Android" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Android" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">iOS
-				<input ng-model="lang.iOS" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.iOS" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">JQuery
-				<input ng-model="lang.JQuery" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.JQuery" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-3">CSS
-				<input ng-model="lang.CSS" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.CSS" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">.net
-				<input ng-model="lang.dotnet" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.dotnet" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">Asp
-				<input ng-model="lang.Asp" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.Asp" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 			<div class="col-xs-3">CMS
-				<input ng-model="lang.CMS" type="checkbox" class="col-xs-6" style="float: right;">
+				<input ng-model="show.CMS" type="checkbox" class="col-xs-6" style="float: right;">
 			</div>
 		</div>
 	</div>
@@ -87,37 +87,22 @@
     <table ng-table="sc.tableParams" show-filter="true" class="table">
         <thead>
         <tr>
-            <th ng-repeat="column in columns" ng-show="lang[column.field]"
-                class="text-center sortable" 
-                ng-click="sc.tableParams.sorting(column.field, 'asc')">
+            <th ng-repeat="column in columns" ng-show="show[column.field]"
+                class="text-center sortable colunaDev" 
+                ng-click="sc.tableParams.sorting(column.field, 'desc')">
                 {{column.title}}
             </th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="user in $data | filter:{Nome : userFilter}">
-            <td ng-repeat="column in columns" class="text-center" title="column.field" sortable="column.field" ng-show="lang[column.field]">
-                <span ng-show="column.field == 'Ocupado' && user['Ocupado']">Sim</span>
-				<span ng-show="column.field == 'Ocupado' && !user['Ocupado']">Não</span> 
+        <tr ng-repeat="user in $data | filter:{Nome : userFilter}" class="linhaDev">
+            <td ng-repeat="column in columns" class="text-center" title="column.field" sortable="column.field" ng-show="show[column.field]">
+                <span ng-show="column.field == 'Disponivel' && user['Disponivel']">Sim</span>
+				<span ng-show="column.field == 'Disponivel' && !user['Disponivel']">Não</span> 
 				<span ng-show="column.field == 'Nome'"><a href="#/dev/{{user['Nome']}}">{{user[column.field]}}</a></span>
-				<span ng-show="column.field !== 'Ocupado' && column.field !== 'Nome'">{{user[column.field]}}</span>
+				<span ng-show="column.field !== 'Disponivel' && column.field !== 'Nome'">{{user[column.field]}}</span>
             </td>
         </tr>
         </tbody>
     </table>
-	<!--<table class="table" ng-table="sc.tableParams" show-filter="true">
-		<tr ng-repeat="usr in mockUsers">
-			<td title="'Nome'" filter="{Nome: 'text'}" sortable="'Nome'">{{usr.Nome}}</td>
-			<td title="'Email'" filter="{Email: 'text'}" sortable="'Email'">{{usr.Email}}</td>
-		</tr>
-	</table>-->
-
-<!--<div id="buscaTabela" class="container-fluid" style="width:100%; margin-bottom:16px;">
-	<div class="row">
-		<div class="col-xs-4">Nome</div>
-		<div class="col-xs-2">Disponível?</div>
-		<div class="col-xs-2">C</div>
-		<div class="col-xs-2">C++</div>
-		<div class="col-xs-2">Python</div>
-	</div>
-</div>-->
+</div>
