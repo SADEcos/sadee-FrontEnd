@@ -62,23 +62,26 @@ mainApp.config(function($routeProvider) {
 });
 
 mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
-  $rootScope.urlCadastro = "url do cadastro";
+  $rootScope.urlCadastro = "localhost";
     //$scope.nome = ''; //
     //$scope.email = ''; //
     //$scope.senha = ''; //
-    $scope.cpf = ''; //
-    $scope.rg = ''; //
-    $scope.instituicao = ''; //
-    $scope.curso = ''; //
-    $scope.disponibilidade = '';//
-    $scope.graduacao = '';//
-    $scope.estagio = '';//
-    $scope.linkedin = '';//
-    $scope.celular = ''; //
-    $scope.telefone = '';//
-    $scope.endereco = '';//
-    $scope.observacoes = '';
-    $scope.conpec = '';//
+    $rootScope.nome = '';
+    $rootScope.email = '';
+    $rootScope.senha = '';
+    $rootScope.cpf = '';
+    $rootScope.rg = '';
+    $rootScope.instituicao = '';
+    $rootScope.curso = '';
+    $rootScope.disponibilidade = '';
+    $rootScope.graduacao = '';
+    $rootScope.estagio = '';
+    $rootScope.linkedin = '';
+    $rootScope.celular = '';
+    $rootScope.telefone = '';
+    $rootScope.endereco = '';
+    $rootScope.observacoes = '';
+    $rootScope.conpec = '';
 
     $scope.nome_dev = ''; //
     $scope.email_dev = ''; //
@@ -99,45 +102,46 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
 
     $scope.dataPost = {};
 
-    $scope.PostNewUser = function(){
-      $scope.PostNewUser.name = $rootScope.username;
-      $scope.PostNewUser.email = $rootScope.emailM;
-      $scope.PostNewUser.password = $rootScope.password;
-      $scope.PostNewUser.phone = $scope.celular;
-      $scope.PostNewUser.homephone = $scope.telefone;
-      $scope.PostNewUser.cpf = $scope.cpf;
-      $scope.PostNewUser.rg = $scope.rg;
-      $scope.PostNewUser.internship = $scope.estagio;
-      $scope.PostNewUser.undergraduate = $scope.graduacao;
-      $scope.PostNewUser.availability = $scope.disponibilidade;
-      $scope.PostNewUser.linkedin = $scope.linkedin;
-      $scope.PostNewUser.address = $scope.endereco;
-      $scope.PostNewUser.conpec = $scope.conpec;
-      $scope.PostNewUser.obs = $scope.observacoes;
-      $scope.PostNewUser.university = $scope.instituicao;
-      $scope.PostNewUser.course = $scope.curso;
-      $scope.PostNewUser.knowledgeList = [];
-      $scope.PostNewUser.knowledgeList.push({"name": "Java", "grade": $scope.sliderJava.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "PHP", "grade": $scope.sliderPHP.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "MySQL", "grade": $scope.sliderMySQL.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Ajax", "grade": $scope.sliderAjax.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Javascript", "grade": $scope.sliderJavaScript.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Python", "grade": $scope.sliderPython.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "C#", "grade": $scope.sliderCSharp.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Ruby", "grade": $scope.sliderRuby.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "C++", "grade": $scope.sliderCpp.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Android", "grade": $scope.sliderAndroid.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "IOS", "grade": $scope.sliderIOS.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "JQuery", "grade": $scope.sliderJQuery.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "CSS", "grade": $scope.sliderCSS.value });
-      $scope.PostNewUser.knowledgeList.push({"name": ".Net", "grade": $scope.sliderDotNet.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "Asp", "grade": $scope.sliderAsp.value });
-      $scope.PostNewUser.knowledgeList.push({"name": "CMS", "grade": $scope.sliderCMS.value });
-      $http.post($rootScope.urlCadastro, $scope.PostNewUser).
-    success(function(data, status, headers, config) {
+    $scope.PostNewUser = function() {
+      $scope.dataPost.email = $rootScope.emailM;
+      $scope.dataPost.username = $rootScope.username;
+      $scope.dataPost.password = $rootScope.password;
+      $scope.dataPost.phone = $scope.celular;
+      $scope.dataPost.homephone = $scope.telefone;
+      $scope.dataPost.cpf = $scope.cpf;
+      $scope.dataPost.rg = $scope.rg;
+      $scope.dataPost.internship = $scope.estagio;
+      $scope.dataPost.undergraduate = $scope.graduacao;
+      $scope.dataPost.availability = $scope.disponibilidade;
+      $scope.dataPost.linkedin = $scope.linkedin;
+      $scope.dataPost.address = $scope.endereco;
+      $scope.dataPost.conpec = $scope.conpec;
+      $scope.dataPost.obs = $scope.observacoes;
+      $scope.dataPost.university = $scope.instituicao;
+      $scope.dataPost.course = $scope.curso;
+      $scope.dataPost.knowledgeList = [];
+      $scope.dataPost.knowledgeList.push({"name": "Java", "grade": $scope.sliderJava.value });
+      $scope.dataPost.knowledgeList.push({"name": "PHP", "grade": $scope.sliderPHP.value });
+      $scope.dataPost.knowledgeList.push({"name": "MySQL", "grade": $scope.sliderMySQL.value });
+      $scope.dataPost.knowledgeList.push({"name": "Ajax", "grade": $scope.sliderAjax.value });
+      $scope.dataPost.knowledgeList.push({"name": "Javascript", "grade": $scope.sliderJavaScript.value });
+      $scope.dataPost.knowledgeList.push({"name": "Python", "grade": $scope.sliderPython.value });
+      $scope.dataPost.knowledgeList.push({"name": "C#", "grade": $scope.sliderCsharp.value });
+      $scope.dataPost.knowledgeList.push({"name": "Ruby", "grade": $scope.sliderRuby.value });
+      $scope.dataPost.knowledgeList.push({"name": "C++", "grade": $scope.sliderCpp.value });
+      $scope.dataPost.knowledgeList.push({"name": "Android", "grade": $scope.sliderAndroid.value });
+      $scope.dataPost.knowledgeList.push({"name": "IOS", "grade": $scope.sliderIOS.value });
+      $scope.dataPost.knowledgeList.push({"name": "JQuery", "grade": $scope.sliderJQuery.value });
+      $scope.dataPost.knowledgeList.push({"name": "CSS", "grade": $scope.sliderCSS.value });
+      $scope.dataPost.knowledgeList.push({"name": ".Net", "grade": $scope.sliderDotNet.value });
+      $scope.dataPost.knowledgeList.push({"name": "Asp", "grade": $scope.sliderAsp.value });
+      $scope.dataPost.knowledgeList.push({"name": "CMS", "grade": $scope.sliderCMS.value });
+      console.log(JSON.stringify($scope.dataPost));
+      $http.post($rootScope.urlCadastro + '/signup', $scope.dataPost).
+        success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
-        console.log(data);
+
       }).
       error(function(data, status, headers, config) {
         // called asynchronously if an error occurs
@@ -202,22 +206,22 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
 
     $scope.limpaCadatro = function()
     {
-        $scope.nome = '';
-        $scope.email = '';
-        $scope.senha = '';
-        $scope.cpf = '';
-        $scope.rg = '';
-        $scope.instituicao = '';
-        $scope.curso = '';
-        $scope.disponibilidade = '';
-        $scope.graduacao = '';
-        $scope.estagio = '';
-        $scope.linkedin = '';
-        $scope.celular = '';
-        $scope.telefone = '';
-        $scope.endereco = '';
-        $scope.observacoes = '';
-        $scope.conpec = '';
+        $rootScope.nome = '';
+        $rootScope.email = '';
+        $rootScope.senha = '';
+        $rootScope.cpf = '';
+        $rootScope.rg = '';
+        $rootScope.instituicao = '';
+        $rootScope.curso = '';
+        $rootScope.disponibilidade = '';
+        $rootScope.graduacao = '';
+        $rootScope.estagio = '';
+        $rootScope.linkedin = '';
+        $rootScope.celular = '';
+        $rootScope.telefone = '';
+        $rootScope.endereco = '';
+        $rootScope.observacoes = '';
+        $rootScope.conpec = '';
         $scope.sliderJava.value = 0;
         $scope.sliderPHP.value = 0;
         $scope.sliderMySQL.value = 0;
