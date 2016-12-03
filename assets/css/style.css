@@ -20,7 +20,8 @@ a{
     width: 100%;
 }
 
-#cadastro{
+
+#devByAdmin, #cadastro{
     width:60%;
     padding: 20px 0px 20px 0px;
 }
