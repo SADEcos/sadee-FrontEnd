@@ -100,10 +100,41 @@
             <td ng-repeat="column in columns" class="text-center" title="column.field" sortable="column.field" ng-show="show[column.field]">
                 <span ng-show="column.field == 'Disponivel' && user['Disponivel']">Sim</span>
 				<span ng-show="column.field == 'Disponivel' && !user['Disponivel']">Não</span> 
-				<span ng-show="column.field == 'Nome'" ><a href="#/dev/{{user['Id']}}" ng-click="UserDetails(user)">{{user[column.field]}}</a></span>
+				<span ng-show="column.field == 'Nome'" ><a ng-click="UserDetails(user)"  data-toggle="modal" data-target="#myModal">{{user[column.field]}}</a></span>
 				<span ng-show="column.field !== 'Disponivel' && column.field !== 'Nome'">{{user[column.field]}}</span>
+                 
             </td>
         </tr>
         </tbody>
     </table>
+
+    </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">	
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Dados de {{$parent.nome}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>Nome completo: {{$parent.nome}}</p>
+            <p>Email: <a>{{$parent.email}}</a></p>
+            <p>Instituição: {{$parent.instituicao}}</p>
+            <p>Curso: {{$parent.curso}}</p>
+            <p>Disponibilidade: {{$parent.disponibilidade}}</p>
+            <p><a>Ver mais detalhes</a></p>
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Mudar Status</button>
+          <button type="button" class="btn btn-info" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>

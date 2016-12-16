@@ -1,5 +1,24 @@
 var mainApp = angular.module("SadeApp", ['ngRoute', 'rzModule', 'ngTable']);
 
+mainApp.directive('modal', function () {
+    return {
+        restrict: 'EA',
+        scope: {
+            title: '=modalTitle',
+            header: '=modalHeader',
+            body: '=modalBody',
+            footer: '=modalFooter',
+            handler: '=lolo'
+        },
+        templateUrl: 'assets/html/modalParcial.html',
+        transclude: true,
+        controller: function ($scope) {
+            //$scope.handler = 'pop'; // Nao sei ainda.
+        },
+    };
+});
+
+
 // configure our routes
 mainApp.config(function($routeProvider) {
     $routeProvider
@@ -171,8 +190,21 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
         else{
             window.location.replace("http://localhost:1414/#error");
         }
+        
+        $scope.dataSignIn = { 'username': name , 'password': pass};
+          $http.post($rootScope.urlCadastro + '/signin', $scope.dataPost).
+        success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
 
-}
+      }).
+      error(function(data, status, headers, config) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+    }
+
+
 
     options = {
         value: 0,

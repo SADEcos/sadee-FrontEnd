@@ -1,4 +1,6 @@
-mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($scope, NgTableParams, $rootScope){
+mainApp.controller("SearchController", function($scope, NgTableParams, $rootScope){
+    
+
     $scope.show = {
 		"Nome": true,
 		"Email": true,
@@ -108,15 +110,19 @@ mainApp.controller("SearchController", ['$scope', 'NgTableParams', function($sco
 	//   success(function(data, status, headers, config) {
     //     // this callback will be called asynchronously
         // when the response is available
-		$rootScope.nome_dev = user['Nome'];
-		$rootScope.email_dev = user['Email'];
-		$rootScope.instituicao_dev = user['Instituicao'];
-		$rootScope.curso_dev = user['Curso'];
-		$rootScope.disponibilidade_dev = user['Disponibilidade'];
+        console.log(JSON.stringify(user));
+     
+		
+		$rootScope.email = user.Email || "";
+		$rootScope.instituicao = user.Instituicao || "";
+        $rootScope.nome = user.Nome || "";
+		$rootScope.curso = user.curso || "";
+		$rootScope.disponibilidade = user.Disponibilidade || "";
+    
     //   }).
     //   error(function(data, status, headers, config) {
     //     // called asynchronously if an error occurs
     //     // or server returns response with an error status.
     //   });
 	}
-}]);
+});
