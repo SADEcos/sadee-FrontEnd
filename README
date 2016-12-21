@@ -1,0 +1,5 @@
+COMO RODAR O FRONT
+
+1. Inicie um servidor HTTP no diretório raiz. Exemplo com Python:
+    $ python3 -m http.server <porta>
+2. Entre no seu navegador em localhost:<porta>.
