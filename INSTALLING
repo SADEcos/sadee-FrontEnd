@@ -1,0 +1,5 @@
+Não há nada para instalar, deve-se apenas rodar o servidor para o site.
+
+1. Entre no diretório raiz do projeto
+2. Inicie um servidor HTTP. Exemplo com Python:
+    $ python -m http.server <numero_porta>
