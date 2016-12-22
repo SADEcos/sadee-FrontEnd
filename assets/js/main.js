@@ -81,7 +81,7 @@ mainApp.config(function($routeProvider) {
 });
 
 mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
-  $rootScope.urlCadastro = "localhost";
+  $rootScope.urlCadastro = "";
     //$scope.nome = ''; //
     //$scope.email = ''; //
     //$scope.senha = ''; //
@@ -118,12 +118,11 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
     $rootScope.endereco_dev = 'Rua dos bobos numero 0';
     $rootScope.observacoes_dev = '';
     $rootScope.conpec_dev = '';
-
     $scope.dataPost = {};
 
     $scope.PostNewUser = function() {
-      $scope.dataPost.email = $rootScope.emailM;
-      $scope.dataPost.username = $rootScope.username;
+      $scope.dataPost.email = $rootScope.email;
+      $scope.dataPost.username = $rootScope.nome;
       $scope.dataPost.password = $rootScope.password;
       $scope.dataPost.phone = $scope.celular;
       $scope.dataPost.homephone = $scope.telefone;
@@ -136,7 +135,7 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
       $scope.dataPost.address = $scope.endereco;
       $scope.dataPost.conpec = $scope.conpec;
       $scope.dataPost.obs = $scope.observacoes;
-      $scope.dataPost.university = $scope.instituicao;
+      $scope.dataPost.university = {name: $scope.instituicao};
       $scope.dataPost.course = $scope.curso;
       $scope.dataPost.token = $rootScope.token;
       $scope.dataPost.knowledgeList = [];
@@ -157,7 +156,10 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
       $scope.dataPost.knowledgeList.push({"name": "Asp", "grade": $scope.sliderAsp.value });
       $scope.dataPost.knowledgeList.push({"name": "CMS", "grade": $scope.sliderCMS.value });
       console.log(JSON.stringify($scope.dataPost));
-      $http.post($rootScope.urlCadastro + '/signup', $scope.dataPost).
+      $http.post('http://localhost:8080/account/signup', $scope.dataPost,{
+        headers: {
+            'Access-Controw-Allow_Origin': 'http://localhost:8080/'
+        }}).
         success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
@@ -170,8 +172,8 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
     }
 
     $scope.PassaCadastro = function(username, email, password) {
-        $rootScope.username = username;
-        $rootScope.emailM = email;
+        $rootScope.nome = username;
+        $rootScope.email = email;
         $rootScope.password = password;
     }
 
@@ -190,10 +192,13 @@ mainApp.controller("MainCtrl", function($scope, $rootScope, $http){
         else{
             window.location.replace("http://localhost:1414/#error");
         }
-        
+
         $scope.dataSignIn = { 'username': name , 'password': pass};
-          $http.post($rootScope.urlCadastro + '/signin', $scope.dataPost).
-        success(function(data, status, headers, config) {
+        $http.post('http://localhost:8080/account/signin', $scope.dataPost,
+          {headers: {
+              'Access-Controw-Allow_Origin': ''
+          }}).
+          success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
 
